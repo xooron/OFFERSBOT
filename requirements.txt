@@ -1,2 +1,7 @@
-aiogram==3.0.0b8
-python-dotenv==1.0.0
+aiogram==3.x.y  # Версия вашего фреймворка
+python-dotenv==1.z.w  # Если используете .env-файлы
+# Другие ваши зависимости...
+
+# Для pydantic и его ядра обязательно указываем флаг --no-binary
+pydantic[...] --no-binary :all:  # Вместо [...] укажите нужные опции (например, [dotenv])
+pydantic-core --no-binary :all:   # Это самая важная строка!
